@@ -29,10 +29,7 @@ WAF.define('Exporter', ['waf-core/widget'], function Exporter(Widget) {
         }),
         exportAttributes: Widget.property({
 			type: 'list',
-			attributes: ['attribute name'],
-			onInsert : function(x){}, 
-			onModify : function (x){}, 
-			onRemove : function (x){}
+			attributes: [{name: 'name', datasourceProperty: 'actionSource'}]
 		}),	
         csvHeader: Widget.property({
             type: 'boolean',

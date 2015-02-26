@@ -1,8 +1,7 @@
 (function ExporterScope() {
     
     var 
-        Exporter = WAF.require('Exporter'),
-        ATTRIBUTE_KEY = 'attribute name';
+        Exporter = WAF.require('Exporter');
     
     function download(content, mime, filename) {
         var linkTag;
@@ -58,7 +57,7 @@
         var collection, attributes, options, data, fileName, zip;
         collection = this.actionSource().getEntityCollection();
         attributes = this.exportAttributes().map(function (attr) { 
-            return attr[ATTRIBUTE_KEY];
+            return attr.name;
         });
         format = format || this.exportFormat();
         options = {
